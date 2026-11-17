@@ -1,44 +1,226 @@
 
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    scroll-behavior: smooth;
+}
 
-    <nav>
-        <h2>My Portfolio ♡</h2>
-        <ul>
-            <li><a href="#home">หน้าหลัก</a></li>
-            <li><a href="#about">เกี่ยวกับฉัน</a></li>
-            <li><a href="#contact">ติดต่อ</a></li>
-        </ul>
-    </nav>
+body {
+    background: #fff9fc;
+    color: #554454;
+}
 
-    <section id="home" class="home">
-        <h1>Welcome to My Website</h1>
-        <h2>สวัสดีค่ะ ยินดีต้อนรับสู่เว็บไซต์ของฉัน</h2>
-        <p>เว็บไซต์แนะนำตัวและรวบรวมผลงานของฉัน</p>
-        <a href="#about" class="btn">รู้จักฉันเพิ่มเติม</a>
-    </section>
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 9%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 15px #e9cbdc40;
+}
 
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>สวัสดีค่ะ ฉันเป็นนักเรียนแผนกเทคโนโลยีสารสนเทศ</p>
-        <p>ชอบเรียนรู้เกี่ยวกับเทคโนโลยี การออกแบบ และการเขียนเว็บไซต์</p>
-    </section>
+nav h2 {
+    color: #d76b9b;
+}
 
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Instagram: khunn_np</p>
-    </section>
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
 
-    <footer>
-        <p>© 2026 My Portfolio</p>
-    </footer>
+nav a {
+    color: #665466;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-</body>
-</html>
+nav a:hover {
+    color: #d76b9b;
+}
+
+.hero {
+    min-height: 540px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #ffe4ef, #eee4ff);
+}
+
+.welcome, .subtitle {
+    color: #d76b9b;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.4;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #d76b9b;
+}
+
+.hero h3 {
+    color: #9d70b5;
+    margin-bottom: 15px;
+}
+
+.hero-text > p:not(.welcome) {
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d76b9b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ad5685;
+    transform: translateY(-3px);
+}
+
+.hero-card {
+    background: white;
+    padding: 45px 35px;
+    border-radius: 25px;
+    text-align: center;
+    width: 290px;
+    box-shadow: 0 10px 30px #b98cae30;
+}
+
+.profile-icon {
+    background: #ffe4ef;
+    color: #d76b9b;
+    font-size: 65px;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    margin: auto auto 20px;
+}
+
+.hero-card h2 {
+    color: #d76b9b;
+    margin-bottom: 5px;
+}
+
+.hero-card span {
+    display: block;
+    font-size: 12px;
+    color: #a47cae;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 75px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin: 10px 0 30px;
+    color: #765477;
+}
+
+.about-card, .contact-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    max-width: 750px;
+    margin: auto;
+    box-shadow: 0 5px 25px #e9cbdc40;
+    line-height: 2;
+}
+
+.about-card h3 {
+    color: #d76b9b;
+    margin-bottom: 15px;
+}
+
+.skills {
+    background: #fff0f6;
+}
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 18px;
+    width: 220px;
+    box-shadow: 0 5px 20px #e9cbdc40;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+}
+
+.skill-card h3 {
+    color: #d76b9b;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #f5e7f1;
+    color: #916c8d;
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 290px;
+    }
+
+    .section {
+        padding: 55px 20px;
+    }
+}
